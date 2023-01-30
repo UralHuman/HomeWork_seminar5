@@ -6,8 +6,8 @@ double maxNum = double.MinValue;
 
 for (int i = 0; i < massiv.Length; i++)
     {
-        massiv[i] = rnd.Next(1,1000);
-        System.Console.Write(massiv[i] + " ");  
+        massiv[i] = rnd.Next(1,100) + rnd.NextDouble();
+        System.Console.Write(massiv[i] + " ; ");  
     }
 
 System.Console.WriteLine();
@@ -16,11 +16,11 @@ foreach (var item in massiv)
 {
     if (item<minNum)
     {
-        minNum = item;
+        minNum = Math.Round(item);
     }
     else if (item>maxNum)
     {
-        maxNum = item;
+        maxNum = Math.Round(item);
     }
 
     
